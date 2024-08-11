@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, "poppins", sans-serif;
+}
+
+body{
+    background-color: #171616;
+}
+
+.nav-logo{
+    font-family: oswald;
+    color: aliceblue;
+    padding: 10px 0 0 20px;
+    font-size: 1.6rem;
+}
+
+.nav-logo span{
+    font-family: amaranth;
+    color: #f5ac0f;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.nav-menu {
+    display: none;
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: azure;
+    font-size: 1.2rem;
+    font-family: arial;
+}
+
+.nav-links ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links ul li{
+    margin-right: 10px;
+}
+
+.nav-links ul li a{
+    width: max-content;
+    text-decoration: none;
+    color: azure;
+    font-weight: bold;
+    margin-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-links ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #0ef;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.nav-links ul li a:hover::after{
+    transform: scaleX(1);
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.container{
+    background:#fff;
+    width:450px;
+    padding:1.5rem;
+    border-radius:10px;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    padding:1.3rem;
+    margin-bottom:0.4rem;
+}
+input{
+    color:inherit;
+    width:100%;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+    padding-left:1.5rem;
+    font-size:15px;
+}
+.input-group{
+    padding:1% 0;
+    position:relative;
+
+}
+.input-group i{
+    position:absolute;
+    color:black;
+}
+input:focus{
+    background-color: transparent;
+    outline:transparent;
+    border-bottom:2px solid hsl(327,90%,28%);
+}
+input::placeholder{
+    color:transparent;
+}
+label{
+    color:#757575;
+    position:relative;
+    left:1.2em;
+    top:-1.3em;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:hsl(327,90%,28%);
+    font-size:15px;
+}
+.recover{
+    text-align:right;
+    font-size:1rem;
+    margin-bottom:1rem;
+
+}
+.recover a{
+    text-decoration:none;
+    color:rgb(125,125,235);
+}
+.recover a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+.btn{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background:rgb(125,125,235);
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+}
+.btn:hover{
+    background:#07001f;
+}
+
+button{
+    color:rgb(125,125,235);
+    border:none;
+    background-color:transparent;
+    font-size:1rem;
+    font-weight:bold;
+}
+
+
+@media (max-width: 768px) {
+  
+    body{
+      overflow: hidden;
+    }
+
+    .home img{
+        display: none;
+        height: 500px;
+        width: auto;
+     }
+
+    .home{
+        margin: 10px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+    .home-content p{
+    margin-right: 10px;
+    }
+
+
+    .nav-links {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        background-color: #1f1f1f;
+        text-align: center;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        padding-right: 20px;
+    }
+    
+    .toggle-button {
+        display: block;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Toggle visibility of icons */
+    .nav-links.active ~ .toggle-button .menu-icon {
+        display: none;
+    }
+
+    .nav-links.active ~ .toggle-button .close-icon {
+        display: block;
+    }
+}
+

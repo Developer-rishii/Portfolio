@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Port<span>Folio</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="intro.html">Profile</a></li>
+        </ul>
+        <div class="toggle-button" id="toggle-button">
+            <div class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="close-icon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Rishikesh Sawarkar</h1>
+            <h3>I'm a <span class="text" id="auto-change">Web Developer</span></h3>
+            <p>Experience with responsive design and various frameworks. My passion for creating
+               <br>functional and visually appealing websites drives me to continuously improve my skills and stay updated with the latest industry trends.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rushikesh-sawarkar-79525630a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/rishi_62727/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Developer-rishii/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@helperyt3156" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <a href="intro.html" class="about-btn">More About Me</a>
+        </div>
+        <img src="employee.png" alt="employee">
+    </section>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+        const texts = [
+        "Web Devoeloper",
+        "Java Prgrammer",
+        "Backend Developer"
+    ];
+
+        let index = 0;
+
+        function changeText() {
+        const h1 = document.getElementById('auto-change');
+        h1.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
+
+        setInterval(changeText, 2000);
+    </script>
+</body>
+</html>

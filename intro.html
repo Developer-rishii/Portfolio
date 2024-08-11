@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievments Section</title>
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Port<span>Folio</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="intro.html">Profile</a></li>
+        </ul>
+        <div class="toggle-button" id="toggle-button">
+            <div class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="close-icon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="profile-card">
+            <img src="Rushikesh_phto.jpeg" alt="Profile Image">
+            <div class="profile-info">
+                <h2>Rushikesh Sawarkar</h2>
+                <p>Web Developer</p>
+                <div class="edu">
+                    <h3>Education</h3>
+                    <div class="bajaj">
+                        <img src="bajaj.jpg" alt="bajaj">
+                        <p>Bajaj Institute of Technology</p>
+                    </div>
+                </div>
+                <div class="profile-links">
+                    <a href="#" onclick="previewProfile()">View Profile</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="title-bar">
+                <h3>Rushikesh Sawarkar</h3>
+            </div>
+            <div id="preview-content"></div>
+            <div class="contact-info">
+                <h1>Contact Info</h1>
+                <div class="address">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="add-text">
+                        <p>Address</p>
+                        <a href="https://www.google.com/search?q=wardha&sca_esv=e6356c902485f8e1&sxsrf=ADLYWILC-IU2UT_Hhg0loC-UJJ2Kxead9g%3A1722782943075&ei=35SvZo2pBPeS4-EP59_a4AQ&ved=0ahUKEwjNlOPKytuHAxV3yTgGHeevFkwQ4dUDCBA&uact=5&oq=wardha&gs_lp=Egxnd3Mtd2l6LXNlcnAiBndhcmRoYTILEC4YgAQYsQMYgwEyERAuGIAEGLEDGIMBGMcBGK8BMhQQLhiABBixAxiDARjHARiKBRivATIKEAAYgAQYQxiKBTILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMgQQABgDMgUQLhiABDIEEAAYAzILEC4YgAQYsQMYgwEyGhAuGIAEGLEDGIMBGJcFGNwEGN4EGOAE2AEDSJMZUNoEWP8NcAF4AZABAJgB3AGgAeMMqgEFMC42LjO4AQPIAQD4AQGYAgOgAr4DwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICExAuGIAEGLADGEMYyAMYigXYAQLCAggQLhiABBixA8ICBRAAGIAEwgIXEC4YgAQYsQMYlwUY3AQY3gQY4ATYAQOYAwCIBgGQBhO6BgYIARABGAm6BgYIAhABGAi6BgYIAxABGBSSBwUxLjAuMqAHj2k&sclient=gws-wiz-serp">Wardha, Maharashtra, India</a>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="add-text">
+                        <p>Email</p>
+                        <a href="https://mail.google.com/mail/">rushikeshsawarkar14@gmail.com</a>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <div class="add-text">
+                        <p>LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/rushikesh-sawarkar-79525630a/">https://www.linkedin.com/in/rushikesh-sawarkar-79525630a</a>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="add-text">
+                        <p>Birthday</p>
+                        <a>12 November</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    function previewProfile(){
+   
+   document.getElementById('preview-modal').style.display = 'block';
+}
+
+function closeModal() {
+   document.getElementById('preview-modal').style.display = 'none';
+}
+    </script>
+</body>
+</html>

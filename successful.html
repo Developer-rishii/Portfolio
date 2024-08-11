@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+      .container{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background: #252525;
+    text-align: center;
+}
+
+.container h1{
+    color: #0ef;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container a{
+    display: inline-block;
+    padding: 0.4rem 1.6rem;
+    margin-top: 0.8rem;
+    background-color: #0ef;
+    border-radius: 6px;
+    font-size: 1 rem;
+    color: black;
+    letter-spacing: normal;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container a:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+}
+
+
+.nav-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: block;
+        margin: 10px;
+    }
+    
+    .nav-menu i {
+        font-size: 1.5rem;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">Port<span>Folio</span></div>
+        <div class="nav-menu">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+          </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>                   
+                    <li><a href="achievements.html">Achievments</a></li>
+                    <li><a href="intro.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="container">
+       <h1 id="changeable">Your Message</h1>
+       <a href="intro.html">OK</a>
+    </section>
+    <script>
+        const texts = [
+    "Your Message",
+    "Successfully Sent"
+];
+
+let index = 0;
+
+function changeText() {
+    const h1 = document.getElementById('changeable');
+    h1.textContent = texts[index];
+    index = (index + 1) % texts.length;
+}
+
+setInterval(changeText, 1500);
+    </script>
+</body>
+</html>

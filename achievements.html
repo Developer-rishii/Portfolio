@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievments Section</title>
+    <link rel="stylesheet" href="achivement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Port<span>Folio</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="intro.html">Profile</a></li>
+        </ul>
+        <div class="toggle-button" id="toggle-button">
+            <div class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="close-icon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="text-container">
+        <div class="intern">
+            <h3>Virtual Internships</h3>
+            <div class="webdev">
+                <img src="slash_mark_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">Web Development Intern</p>
+                    <p class="p2">Slash Mark IT Startup · Internship</p>
+                    <p class="p2">May 2024 - Jul 2024 · 2 mos</p>
+                    <a href="https://drive.google.com/file/d/1mgQ46hfLDOYZMWVk4QGYXfElYRu9nWOB/view?usp=sharing">Completion Certificate</a>
+                </div>
+            </div>
+            <div class="webdev">
+                <img src="cognifyz_techonologies_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">Web Development Intern</p>
+                    <p class="p2">Cognifyz Technologies · Internship</p>
+                    <p class="p2">May 2024 - Jun 2024 · 1 mos</p>
+                    <a href="https://drive.google.com/file/d/1rWbAyFoEnT0iu4TMlISE1Ixb9w1siQAB/view?usp=sharing">Completion Certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="intern">
+            <h3>Certifications</h3>
+            <div class="webdev">
+                <img src="wns_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">Job Skill Training (Career Readiness)</p>
+                    <p class="p2"> WNS Cares Foundation (WCF)</p>
+                    <p class="p2">Issued Aug 2024</p>
+                    <a href="https://drive.google.com/file/d/1ma6IlSdYIMPQ8a9b6aamIu9l0ljxgE0q/view?usp=sharing">Show Credential</a>
+                </div>
+            </div>
+            <div class="webdev">
+                <img src="skillsoft_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">API Development: Tools</p>
+                    <p class="p2">Skillsoft</p>
+                    <p class="p2">Issued Jul 2024</p>
+                    <p class="p2">Credential ID 110679476</p>
+                    <a href="https://skillsoft.digitalbadges.skillsoft.com/aa9a01eb-b8b9-4143-8dbc-f3c2e7579939" target="_blank">Show Credential</a>
+                </div>
+            </div>
+            <div class="webdev">
+                <img src="skillsoft_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">Web Development Concepts</p>
+                    <p class="p2">Skillsoft</p>
+                    <p class="p2">Issued Jul 2024</p>
+                    <p class="p2">Credential ID 110658923</p>
+                    <a href="https://skillsoft.digitalbadges.skillsoft.com/62f32116-5d67-4492-89f4-7d1cc64fadf6" target="_blank">Show Credential</a>
+                </div>
+            </div>
+        </div>
+        <div class="intern">
+            <h3>Honors & awards</h3>
+            <div class="webdev">
+                <img src="ycce_logo.jpg" alt="bajaj">
+                <div class="para">
+                    <p class="p1">GyanSabha 2k24</p>
+                    <p class="p2">Issued by Yeshwantrao Chavan College of Engineering · Apr 2024</p>
+                    <p class="p2">Honor with trophie & certificate for securing 3rd position in intercollegiate seminar presentation competition.</p>
+                    <a href="https://drive.google.com/file/d/1mrcN1fAIIyMNB5ByGTpYRz0xt0NbajHU/view?usp=sharing">Certificate</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const toggleButton = document.getElementById('toggle-button');
+            const navLinks = document.getElementById('nav-links');
+    
+            toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    
+            const texts = [
+            "Web Devoeloper",
+            "Java Prgrammer",
+            "Backend Developer"
+        ];
+    
+            let index = 0;
+    
+            function changeText() {
+            const h1 = document.getElementById('auto-change');
+            h1.textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+    
+            setInterval(changeText, 2000);
+        </script>
+</body>
+</html>

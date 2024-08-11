@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #171616;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #171616;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-family: oswald;
+    color: aliceblue;
+}
+
+
+.logo span{
+    font-family: amaranth;
+    color: #f5ac0f;
+}
+
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 18px;
+    width: max-content;
+    color: azure;
+    font-weight: bold;
+    margin-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #0ef;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.nav-links li a:hover::after{
+    transform: scaleX(1);
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.toggle-button {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's on top of other elements */
+}
+
+.menu-icon, .close-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-icon {
+    display: none;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.close-icon .bar1, .close-icon .bar2 {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.close-icon .bar1 {
+    transform: rotate(45deg);
+}
+
+.close-icon .bar2 {
+    transform: rotate(-45deg);
+}
+
+
+
+.text-container{
+    margin: 20px;
+}
+
+.intern{
+    background: #252525;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.intern h3{
+    text-align: start;
+    color: #e7e2e2;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin: 1rem;
+}
+
+.webdev{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.webdev img{
+    height: 2rem;
+    width: 2rem;
+    background-size: cover;
+    padding: 0;
+    margin: 2px;
+}
+
+.webdev p{
+    font-size: smaller;
+    margin: 0.3rem;
+    color: azure;
+}
+
+.para{
+    margin: 0.3rem;
+}
+
+.para .p1{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.para .p2{
+    font-size: 0.85rem;
+    font-weight: 50;
+    color: rgb(161, 165, 167);
+}
+
+.para a{
+    color: rgb(0, 106, 255);
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 768px) {
+  
+    body{
+      overflow: hidden;
+    }
+
+    .nav-links {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        background-color: #1f1f1f;
+        text-align: center;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        padding-right: 20px;
+    }
+    
+    .toggle-button {
+        display: block;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Toggle visibility of icons */
+    .nav-links.active ~ .toggle-button .menu-icon {
+        display: none;
+    }
+
+    .nav-links.active ~ .toggle-button .close-icon {
+        display: block;
+    }
+}
